@@ -8,7 +8,7 @@ const LinkOfItem = ({ item }) => {
         <NavLink
           key={index}
           className={({ isActive }) =>
-            `block text-nowrap p-2 pl-12 hover:bg-bg1 rounded-md ${
+            `block text-nowrap hover:translate-x-2 transition-all duration-200 p-2 pl-12 hover:bg-bg1 rounded-md ${
               isActive ? "bg-slate-200" : ""
             }`
           }

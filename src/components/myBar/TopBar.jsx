@@ -12,13 +12,13 @@ import { cn } from '../../utils/lib/cn';
 
 export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1, BCPath2}) => {
   return (
-    <header className={cn('px-7 py-5 border-b fixed top-0 md2:left-[15%] md2:w-[65%] w-[100%] bg-white  z-10',TBclass)}>
+    <header className={cn('px-7 py-5 border-b fixed top-0  w-full bg-white  z-10',TBclass)}>
       <div className='flex justify-between sm:items-center items-start'>
         <div className='flex md:flex-row flex-col justify-start md:items-center gap-2'>
           <button onClick={toggleLeftSidebar}>
             <TbLayoutSidebarLeftCollapse 
               size={22} 
-              className='cursor-pointer md2:inline-block hidden'
+              className='cursor-pointer md:inline-block hidden'
             />
           </button>
           <FaRegStar size={22} className='cursor-pointer'/>

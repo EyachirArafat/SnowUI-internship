@@ -1,13 +1,11 @@
 import { FormControl, InputLabel, NativeSelect } from '@mui/material'
 import React from 'react'
-import { TopBar } from '../myBar/TopBar'
 import { OverviewHeader } from './OverviewHeader'
+import { LineChart } from './LineChart'
 
 export const BodyData = () => {
   return (
     <div>
-      <TopBar BCPath1="Dashboards"
-        BCPath2="Default"/>
       <div className='flex justify-between'>
         <h2 className='text-lg font-medium '>Overview</h2>
         <div>
@@ -30,6 +28,10 @@ export const BodyData = () => {
       </div>
       {/* overview header */}
       <OverviewHeader/>
+
+      {/* line chart */}
+      <LineChart/>
+
 
     </div>
   )

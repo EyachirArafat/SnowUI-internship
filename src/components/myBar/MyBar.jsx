@@ -22,13 +22,14 @@ export const MyBar = ({mainData}) => {
 
 
       
-      <div className="md2:w-[65%] w-full md2:ml-[15%]">
+      <div className={`md2:w-[65%] md2:ml-[15%] ${!isLeftSidebar ? "md:w-[80%] w-full md:ml-[20%]" : "mx-auto"}`}>
         <TopBar 
         toggleLeftSidebar={toggleLeftSidebar} 
         toggleRightSidebar={toggleRightSidebar}
+        BCPath1="Dashboards"
+        BCPath2="Default"
         
-        // TBclass={`${!isLeftSidebar ? "w-[65%]" : "w-[80%] left-[0%]"}
-        //   ${!isRightSidebar ? "w-[65%]" : "w-[85%]"}`}
+        TBclass={`md2:w-[65%] md2:left-[15%] left-[0%] ${!isLeftSidebar ? "md:w-[80%]  md:left-[20%]" : "md:w-full md:left-[0%] md:ml-[0%] "}`}
         />
 
         <div className="sm:pt-20 pt-28 py-6 space-y-4">

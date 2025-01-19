@@ -17,7 +17,8 @@ export default {
         t14: "14px"
       },
       screens: {
-        md2: "1111px"
+        md2: "1111px",
+        md3: "900px"
       }
     },
   },
