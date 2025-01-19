@@ -16,6 +16,9 @@ export default {
       fontSize:{
         t14: "14px"
       },
+      screens: {
+        md2: "1111px"
+      }
     },
   },
   plugins: [],

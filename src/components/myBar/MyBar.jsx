@@ -2,45 +2,44 @@ import React, { useState } from "react";
 import { Container } from "../common/Container";
 import { TopBar } from "./TopBar";
 import { LeftSideBar } from "./LeftSideBar";
+import { RightSideBar } from "./RightSideBar";
 
 export const MyBar = () => {
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isLeftSidebar, setIsLeftSidebar] = useState(false);
+  const [isRightSidebar, setIsRightSidebar] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarCollapsed(!isSidebarCollapsed);
+  const toggleLeftSidebar = () => {
+    setIsLeftSidebar(!isLeftSidebar);
+  };
+  const toggleRightSidebar = () => {
+    setIsRightSidebar(!isRightSidebar);
   };
 
   return (
-    <div>
-      <Container>
-        <div className="grid grid-flow-col lg:grid-cols-12 h-screen transition-all duration-500">
-          {/* Left Sidebar */}
-          {!isSidebarCollapsed && (
-            <div className="lg:col-span-2 transition-all duration-300">
-              <div className="h-full">
-                <LeftSideBar />
-              </div>
-            </div>
-          )}
+    <div className="flex h-screen">
 
-          {/* Main Content */}
-          <div
-            className={`transition-all duration-300 ${
-              isSidebarCollapsed ? "lg:col-span-12" : "lg:col-span-10"
-            }`}
-          >
-            <div>
-              <TopBar toggleLeftSidebar={toggleSidebar} />
-              <div className="p-4">Main Content Area</div>
-            </div>
-          </div>
+      {!isLeftSidebar && <LeftSideBar />}
 
-          {/* Right Sidebar */}
-          <div className="lg:col-span-2">
-            <div className="h-full">Right Sidebar Content</div>
+
+      
+      <div className="md2:w-[65%] w-full md2:ml-[15%]">
+        <TopBar 
+        toggleLeftSidebar={toggleLeftSidebar} 
+        toggleRightSidebar={toggleRightSidebar}
+        // TBclass={`${!isLeftSidebar ? "w-[65%]" : "w-[80%] left-[0%]"}
+        //   ${!isRightSidebar ? "w-[65%]" : "w-[85%]"}`}
+        />
+
+        <div className="sm:pt-20 pt-28 py-6 space-y-4">
+          <div className="bg-white p-4 rounded ">
+
           </div>
         </div>
-      </Container>
+
+      </div>
+
+
+      {!isRightSidebar && <RightSideBar />}
     </div>
   );
 };
