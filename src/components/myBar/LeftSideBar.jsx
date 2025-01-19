@@ -35,7 +35,7 @@ export const LeftSideBar = ({className}) => {
             </div>
             <ul className="list-disc ml-5">
               <li className="py-[10px] text-t14 font-medium">
-                <NavLink to="/Overview">
+                <NavLink to="/overview">
                   Overview
                 </NavLink>
               </li>
@@ -55,7 +55,7 @@ export const LeftSideBar = ({className}) => {
                 <div>
                   <p className="text-t14 font-medium text-black/20">{section.title}</p>
                   <div>
-                    <p>{section.item.map((itemLink, index)=>(
+                    {section.item.map((itemLink, index)=>(
                       <div key={index} className="py-3">
                         <div onClick={() => toggleDropdown(itemLink.id)} className="flex items-center gap-1 cursor-pointer hover:bg-bg1 ">
                           {itemLink.subItem && (
@@ -72,7 +72,7 @@ export const LeftSideBar = ({className}) => {
                           </div>
                         )}
                       </div>
-                    ))}</p>
+                    ))}
                   </div>
 
                 </div>

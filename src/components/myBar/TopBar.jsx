@@ -10,7 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { cn } from '../../utils/lib/cn';
 
 
-export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass}) => {
+export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1, BCPath2}) => {
   return (
     <header className={cn('px-7 py-5 border-b fixed top-0 md2:left-[15%] md2:w-[65%] w-[100%] bg-white  z-10',TBclass)}>
       <div className='flex justify-between sm:items-center items-start'>
@@ -25,14 +25,14 @@ export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass}) => {
           <div role="presentation">
             <Breadcrumbs aria-label="breadcrumb">
               <Link underline="hover" color="inherit" href="/Dashboards" >
-                <span className='sm:text-base text-[12px] '>Dashboards</span>
+                <span className='sm:text-base text-[12px] '>{BCPath1}</span>
               </Link>
               <Link
                 underline="hover"
                 color="inherit"
                 href="/dashboards/default/"
               >
-                <span className='sm:text-base text-[12px] '>Default</span>
+                <span className='sm:text-base text-[12px] '>{BCPath2}</span>
               </Link>
             </Breadcrumbs>
           </div>

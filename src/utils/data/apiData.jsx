@@ -1,5 +1,6 @@
 import { AiOutlinePieChart } from "react-icons/ai";
 import { FaRegComments, FaRegUserCircle } from "react-icons/fa";
+import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6";
 import { GrBug } from "react-icons/gr";
 import { IoMdWifi } from "react-icons/io";
 import { IoFolderOutline } from "react-icons/io5";
@@ -16,7 +17,7 @@ export const leftSidebarData = [
       {
         id:"item1",
         logo: <AiOutlinePieChart />,
-        itemTitle: <NavLink to="/Overview">
+        itemTitle: <NavLink to="/overview">
         Overview
       </NavLink>,
       },
@@ -133,3 +134,39 @@ export const rightSidebarData = {
     { id: 6,img: '/avatar-11.svg', name: "Melody Macy" },
   ],
 };
+
+
+export const OverviewHeaderData = [
+  {
+    id: 1,
+    header: "Views",
+    users: "7265",
+    percentage: "+11.01%",
+    parameter: <FaArrowTrendUp />,
+  },
+  {
+    id: 2,
+    header: "Visits",
+    users: "3671",
+    percentage: "-0.03%",
+    parameter: <FaArrowTrendDown />,
+  },
+  {
+    id: 3,
+    header: "New Users",
+    users: "156",
+    percentage: "+15.03%",
+    parameter: <FaArrowTrendUp />,
+  },
+  {
+    id: 4,
+    header: "Active Users",
+    users: "2318",
+    percentage: "+11.01%",
+    parameter: <FaArrowTrendUp />,
+  },
+]
+
+
+
+
