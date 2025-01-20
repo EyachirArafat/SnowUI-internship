@@ -47,7 +47,7 @@ export const TrafficByLocation = () => {
   ]
 
   return (
-    <div className="w-full h-full flex justify-center items-center ">
+    <div className="w-full max-w-[350px] max-h-[250px] h-full flex justify-center items-center ">
   <div className="relative flex justify-center items-center gap-6 w-full max-w-md h-64">
     <Doughnut data={doughnutData} options={doughnutOptions} />
     

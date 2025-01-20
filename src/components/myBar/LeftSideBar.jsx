@@ -83,7 +83,9 @@ export const LeftSideBar = ({className}) => {
           </div>
         </div>
         <div className=" bg-white mt-auto flex justify-center py-6">
-          <img src="/SnowUI-Logo.svg" alt="SnowUI-Logo.svg" />
+          <NavLink to="/">
+            <img src="/SnowUI-Logo.svg" alt="SnowUI-Logo.svg" />
+          </NavLink>
         </div>
       </div>
     
