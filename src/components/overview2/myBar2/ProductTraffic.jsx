@@ -84,9 +84,11 @@ export const ProductTrafficChart = () => {
         </div>
       
       {/* Chart Section */}
-      <div style={{ height: '300px', width: '100%' }}>
+      
+      <div className="max-h-[300px]">
       <Bar data={data} options={options} />
       </div>
+      
     </div>
     </div>
 );
