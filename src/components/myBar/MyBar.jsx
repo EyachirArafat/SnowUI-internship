@@ -22,14 +22,13 @@ export const MyBar = ({mainData}) => {
 
       {!isLeftSidebar && <LeftSideBar />}
 
-
-      
       <div className={`md2:w-[65%] md2:ml-[15%] ${!isLeftSidebar ? "md:w-[75%] w-full md:ml-[25%]" : "mx-auto"}`}>
         <TopBar 
         toggleLeftSidebar={toggleLeftSidebar} 
         toggleRightSidebar={toggleRightSidebar}
         BCPath1="Dashboards"
         BCPath2="Default"
+        RCollapseClass="md2:inline-block hidden"
         
         TBclass={`md2:w-[65%] md2:left-[15%] left-[0%] ${!isLeftSidebar ? "md:w-[75%]  md:left-[25%]" : "md:w-full md:left-[0%] md:ml-[0%] "}`}
         />

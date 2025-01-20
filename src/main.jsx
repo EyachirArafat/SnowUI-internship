@@ -10,7 +10,8 @@ import {
 } from "react-router-dom";
 import { MyBar } from "./components/myBar/MyBar.jsx";
 import { BodyData } from "./components/home/BodyData.jsx";
-
+import { MyBar2 } from "./components/overview2/MyBar2.jsx";
+import { BodyData2 } from "./components/overview2/BodyData2.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,7 +33,20 @@ const router = createBrowserRouter(
       </Route>
 
       {/* Alternate Layout: MyBar2 */}
-      
+      <Route element={<MyBar2 />}>
+        <Route path="overview" element={<BodyData2 />} />
+        <Route
+          path="*"
+          element={
+            <div className="text-center justify-center items-center h-screen mx-auto flex flex-col text-5xl">
+              <span className="text-red-500 pt-20">404!</span>
+              <span className="text-black dark:text-gray-400 text-3xl">
+                Page not found in MyBar2
+              </span>
+            </div>
+          }
+        />
+      </Route>
     </Route>
   )
 );

@@ -14,6 +14,11 @@ export default {
         bg3: "#E6F1FD",
         bg4: "#F9F9FA",
         bg5: "#FFFFFF",
+        SPurple: "#AF52DE",
+      },
+      backgroundImage: {
+        'OVHGradient1': 'linear-gradient(to bottom , #007AFF 60%, #ffffff 100%)',
+        'OVHGradient2': 'linear-gradient(to bottom, #000000 , #ffffff)',
       },
       fontSize:{
         t14: "14px"

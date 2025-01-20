@@ -10,7 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { cn } from '../../utils/lib/cn';
 
 
-export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1, BCPath2}) => {
+export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1, BCPath2, RCollapseClass}) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleDarkModeToggle = () => {
@@ -28,7 +28,7 @@ export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1,
   }, []);
 
   return (
-    <header className={cn('px-7 py-5 border-b dark:border-b-bg5/10 fixed top-0 w-full  dark:text-white z-30 shadow-md',TBclass)} >
+    <header className={cn('px-7 py-5 border-b dark:border-b-bg5/10 fixed top-0 w-full  dark:text-white z-30 dark:shadow-md',TBclass)} >
       <div className='flex justify-between sm:items-center items-start'>
         <div className='flex md:flex-row flex-col justify-start md:items-center gap-2'>
           <button onClick={toggleLeftSidebar}>
@@ -73,11 +73,12 @@ export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1,
           <button onClick={toggleRightSidebar}>
             <TbLayoutSidebarRightCollapse 
             size={22} 
-            className='cursor-pointer md2:inline-block hidden'
+            className={cn('cursor-pointer', RCollapseClass)}
             />
           </button>
           </div>
         </div>
+        
 
       </div>
     </header>

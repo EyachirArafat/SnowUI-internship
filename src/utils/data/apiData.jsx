@@ -168,5 +168,48 @@ export const OverviewHeaderData = [
 ]
 
 
+export const leftSidebarData2 = [
+  {
+    id: 1,
+    title: "Overview",
+    icon: <AiOutlinePieChart size={24}/>,
+  },
+  {
+    id: 2,
+    title: "eCommerce",
+    icon: <RiShoppingBag4Line size={24}/>,
+  },
+  {
+    id: 3,
+    title: "Projects",
+    icon: <IoFolderOutline size={24}/>,
+  },
+  {
+    id: 4,
+    title: "User Profile",
+    icon: <FaRegUserCircle size={24}/>,
+  },
+  {
+    id: 5,
+    title: "Account",
+    icon: <MdOutlineAccountBox size={24}/>,
+  },
+  {
+    id: 6,
+    title: "Corporate",
+    icon: <RiTeamLine size={24}/>,
+  },
+  {
+    id: 7,
+    title: "Blog",
+    icon: <LuBookAudio size={24}/>,
+  },
+  {
+    id: 8,
+    title: "Social",
+    icon: <FaRegComments size={24}/>,
+  },
+]
+ 
 
 
