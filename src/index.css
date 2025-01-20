@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 
-@layer base{
-  *{
-    margin: 0;
-    padding: 0;
-  }
+*{
+  margin: 0;
+  padding: 0;
 }
 
+.MuiBreadcrumbs-separator.css-jhr02i-MuiBreadcrumbs-separator {
+  color: white !important;
+}

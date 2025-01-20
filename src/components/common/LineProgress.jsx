@@ -3,12 +3,12 @@ import { cn } from "../../utils/lib/cn";
 
 export const LineProgress = ({ className, arrNum }) => {
   const colorSteps = [
-    "bg-gray-600",
-    "bg-gray-500",
-    "bg-gray-400",
-    "bg-gray-300",
-    "bg-gray-200",
-    "bg-gray-100",
+    "bg-gray-600 dark:bg-gray-100",
+    "bg-gray-500 dark:bg-gray-200",
+    "bg-gray-400 dark:bg-gray-300",
+    "bg-gray-300 dark:bg-gray-400",
+    "bg-gray-200 dark:bg-gray-500",
+    "bg-gray-100 dark:bg-gray-600",
   ];
   const segmentWidth = `${100 / arrNum}%`;
 
@@ -20,7 +20,7 @@ export const LineProgress = ({ className, arrNum }) => {
           style={{ width: segmentWidth }}
           className={cn(
             "h-[6px] rounded-full",
-            colorSteps[index] || "bg-gray-100",
+            colorSteps[index] || "bg-gray-100 dark:bg-gray-600",
             className
           )}
         />

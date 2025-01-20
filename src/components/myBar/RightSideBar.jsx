@@ -5,7 +5,7 @@ import { cn } from "../../utils/lib/cn";
 export const RightSideBar = ({className}) => {
   return (
 
-      <div className={cn("h-screen fixed top-0 right-0 md2:w-[20%] bg-white shadow-lg border-l p-4 md2:flex hidden flex-col", className)}>
+      <div className={cn("h-screen fixed top-0 right-0 md2:w-[20%] shadow-lg border-l p-4 md2:flex hidden flex-col dark:text-white  dark:border-l-bg5/10", className)}>
 
         {/* Sidebar Content */}
         <div className="overflow-y-auto pl-6">
@@ -14,10 +14,10 @@ export const RightSideBar = ({className}) => {
             <div className="flex flex-col gap-1">
               {rightSidebarData.notifications.map((notification)=>(
                 <div key={notification.id} className="flex lg:flex-row flex-col gap-2 p-2 cursor-pointer group">
-                  <p className="flex items-center justify-center p-1 h-6 bg-bg2 rounded-full ">{notification.logo}</p>
+                  <p className="flex items-center justify-center p-1 h-6 bg-bg2 dark:bg-bg5/15 rounded-full ">{notification.logo}</p>
                   <div className="hover:scale-105">
                     <h3 className="text-t14 font-medium">{notification.message}</h3>
-                    <p className="text-[12px] group-hover:text-[16px] transition-all duration-200 text-black/40">{notification.time}</p>
+                    <p className="text-[12px] group-hover:text-[16px] transition-all duration-200 text-black/40 dark:text-white/40">{notification.time}</p>
                   </div>
 
                 </div>
@@ -35,7 +35,7 @@ export const RightSideBar = ({className}) => {
                   </div>
                   <div className="hover:scale-105">
                     <h3 className="text-t14 font-medium">{activity.message}</h3>
-                    <p className="text-[12px] group-hover:text-[16px] transition-all duration-200 text-black/40">{activity.time}</p>
+                    <p className="text-[12px] group-hover:text-[16px] transition-all duration-200 text-black/40 dark:text-white/40">{activity.time}</p>
                   </div>
 
                 </div>

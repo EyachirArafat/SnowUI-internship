@@ -6,17 +6,19 @@ import { TrafficDL } from './TrafficDL'
 
 export const BodyData = () => {
   return (
-    <div>
+    <div className=' dark:text-white'>
       <div className='flex justify-between'>
         <h2 className='text-lg font-medium '>Overview</h2>
         <div>
-        <FormControl fullWidth>
+        <FormControl fullWidth className='dark:'>
           <NativeSelect
+          className='dark:text-white '
             defaultValue="Today"
             inputProps={{
               name: 'time',
               id: 'uncontrolled-native',
             }}
+            
           >
             <option value="Today">Today</option>
             <option value="Tomorrow">Tomorrow</option>

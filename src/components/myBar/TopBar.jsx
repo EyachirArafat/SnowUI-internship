@@ -3,7 +3,7 @@ import { FaRegStar } from 'react-icons/fa'
 import { TbLayoutSidebarLeftCollapse, TbLayoutSidebarRightCollapse } from 'react-icons/tb'
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import { IoSunnyOutline } from 'react-icons/io5';
+import { IoMoonOutline, IoSunnyOutline } from 'react-icons/io5';
 import { MdHistory } from 'react-icons/md';
 import { GoBell } from 'react-icons/go';
 import SearchIcon from '@mui/icons-material/Search';
@@ -28,7 +28,7 @@ export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1,
   }, []);
 
   return (
-    <header className={cn('px-7 py-5 border-b fixed top-0  w-full bg-white dark:bg-gray-800 dark:text-white z-10',TBclass)}>
+    <header className={cn('px-7 py-5 border-b dark:border-b-bg5/10 fixed top-0 w-full  dark:text-white z-30 shadow-md',TBclass)} >
       <div className='flex justify-between sm:items-center items-start'>
         <div className='flex md:flex-row flex-col justify-start md:items-center gap-2'>
           <button onClick={toggleLeftSidebar}>
@@ -41,22 +41,23 @@ export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1,
           <div role="presentation">
             <Breadcrumbs aria-label="breadcrumb">
               <Link underline="hover" color="inherit" href="/Dashboards" >
-                <span className='sm:text-base text-[12px] '>{BCPath1}</span>
+                <span className='sm:text-base text-[12px] dark:text-white'>{BCPath1}</span>
               </Link>
               <Link
                 underline="hover"
                 color="inherit"
                 href="/dashboards/default/"
+                className='dark:text-white'
               >
-                <span className='sm:text-base text-[12px] '>{BCPath2}</span>
+                <span className='sm:text-base text-[12px] dark:text-white'>{BCPath2}</span>
               </Link>
             </Breadcrumbs>
           </div>
         </div>
         <div className='flex md:items-center md:flex-row flex-col-reverse gap-2'>
-          <div className='p-1 sm:inline hidden rounded-lg bg-bg1 text-nowrap'>
+          <div className='p-1 sm:inline hidden rounded-lg bg-bg1 dark:bg-bg5/15 dark:text-white text-nowrap'>
           <SearchIcon/>
-          <input type="text" className='focus:ring-0 focus:outline-0 bg-bg1 ' placeholder='search...'/>
+          <input type="text" className='focus:ring-0 focus:outline-0 bg-bg1 dark:bg-bg5/0 dark:text-white' placeholder='search...'/>
           </div>
           
           <div className='flex items-center gap-2 justify-end'>

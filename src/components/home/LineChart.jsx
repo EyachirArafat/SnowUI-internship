@@ -51,7 +51,7 @@ const options = {
         display: false,
       },
       ticks: {
-        color: '#4A5568',
+        // color: '#4A5568',
       },
     },
     y: {
@@ -60,7 +60,7 @@ const options = {
         borderDash: [5, 5],
       },
       ticks: {
-        color: '#4A5568',
+        // color: '#4A5568',
       },
       beginAtZero: true,
     },
@@ -78,9 +78,9 @@ export const LineChart = () => {
   return (
     <div className=''>
       <div className='grid grid-cols-4 gap-4'>
-        <div className='sm:col-span-3 col-span-4 bg-bg1 sm:p-4 p-2 rounded-xl'>
+        <div className='sm:col-span-3 col-span-4 bg-bg1 dark:bg-bg5/5 sm:p-4 p-2 rounded-xl'>
           <div className='flex flex-wrap pb-4'>
-          <div className="flex flex-wrap sm:gap-3 gap-1 sm:border-r sm:pr-6">
+          <div className="flex flex-wrap sm:gap-3 gap-1 sm:border-r sm:pr-6 ">
             <button
               onClick={() => handleButtonClick("Total Users")}
               className={`sm:text-base text-t14 ${
@@ -109,12 +109,12 @@ export const LineChart = () => {
           <div className='sm:pl-6 pl-2 flex gap-3 items-center'>
             {/* Custom Legend */}
             <div className='flex items-center gap-2'>
-              <span className='w-2 h-2 rounded-full bg-black'></span>
-              <p className='text-gray-700'>This Year</p>
+              <span className='w-2 h-2 rounded-full bg-black '></span>
+              <p className='text-gray-700 dark:text-gray-400'>This Year</p>
             </div>
             <div className='flex items-center gap-2'>
               <span className='w-2 h-2 rounded-full bg-blue-400'></span>
-              <p className='text-gray-700'>Last Year</p>
+              <p className='text-gray-700 dark:text-gray-400'>Last Year</p>
             </div>
           </div>
           </div>
@@ -124,7 +124,7 @@ export const LineChart = () => {
             {activeButton === "Total Users" && (<Line data={data} options={options} />)}
           </div>
         </div>
-        <div className='sm:col-span-1 col-span-4 bg-bg1 sm:p-4 p-2 rounded-xl'>
+        <div className='sm:col-span-1 col-span-4 bg-bg1 dark:bg-bg5/5 sm:p-4 p-2 rounded-xl'>
           <TrafficByWebsite/>
         </div>
       </div>

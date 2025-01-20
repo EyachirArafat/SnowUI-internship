@@ -13,7 +13,7 @@ export default {
         bg2: "#EDEEFC",
         bg3: "#E6F1FD",
         bg4: "#F9F9FA",
-        bg5: "#FFFFFF"
+        bg5: "#FFFFFF",
       },
       fontSize:{
         t14: "14px"

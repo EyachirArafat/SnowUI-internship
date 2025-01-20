@@ -18,11 +18,11 @@ export const LeftSideBar = ({className}) => {
 
   return (
 
-      <div className={cn("h-screen fixed top-0 left-0 md2:w-[15%] md:w-[20%] dark:bg-bg5/15 bg-white shadow-lg border-r px-4 md:flex hidden flex-col", className)}>
+      <div className={cn("h-screen fixed top-0 left-0 md2:w-[15%] md:w-[25%]  dark:text-white shadow-lg border-r dark:border-r-bg5/10 px-4 md:flex hidden flex-col", className)}>
         {/* Sidebar Header */}
         <div className="flex gap-2 pl-6 items-center py-7">
            <img src="/profile-pic.svg" alt="profile-pic.svg" />
-           <h3 className="text-t14 font-medium">ByeWind</h3>
+           <h3 className="text-t14 font-medium ">ByeWind</h3>
         </div>
 
         {/* Sidebar Content */}
@@ -30,8 +30,8 @@ export const LeftSideBar = ({className}) => {
           {/* Section 1: Favorites */}
           <div className="pb-5">
             <div className="flex gap-4 items-center">
-              <button className="text-t14 font-medium text-black/40">Favorites</button>
-              <button className="text-t14 font-medium text-black/20">Recently</button>
+              <button className="text-t14 font-medium text-black/40 dark:text-white/50">Favorites</button>
+              <button className="text-t14 font-medium text-black/20 dark:text-white/30">Recently</button>
             </div>
             <ul className="list-disc ml-5">
               <li className="py-[10px] text-t14 font-medium">
@@ -53,11 +53,11 @@ export const LeftSideBar = ({className}) => {
             {leftSidebarData.map((section, sectionId)=>(
               <div key={sectionId}>
                 <div>
-                  <p className="text-t14 font-medium text-black/20">{section.title}</p>
+                  <p className="text-t14 font-medium text-black/20 dark:text-white/50">{section.title}</p>
                   <div>
                     {section.item.map((itemLink, index)=>(
                       <div key={index} className="py-3">
-                        <div onClick={() => toggleDropdown(itemLink.id)} className="flex items-center gap-1 cursor-pointer hover:bg-bg1 ">
+                        <div onClick={() => toggleDropdown(itemLink.id)} className="flex items-center gap-1 cursor-pointer hover:bg-bg1 hover:dark:bg-bg5/15 rounded-lg p-1 pb-1">
                           {itemLink.subItem && (
                             <p className={`h-5 w-5  transform transition ${
                               isDropdownOpen[itemLink.id] ? "rotate-90" : ""
@@ -82,7 +82,7 @@ export const LeftSideBar = ({className}) => {
            
           </div>
         </div>
-        <div className=" bg-white mt-auto flex justify-center py-6">
+        <div className=" bg-white dark:bg-transparent mt-auto flex justify-center py-6">
           <NavLink to="/">
             <img src="/SnowUI-Logo.svg" alt="SnowUI-Logo.svg" />
           </NavLink>

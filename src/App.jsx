@@ -5,8 +5,9 @@ import { Outlet } from "react-router-dom"
 export const App = () => {
   return (
     <>
-      <div>
-        <MyBar mainData={<Outlet/>}/>
+      <div className="dark:bg-black/80">
+        {/* <MyBar mainData={<Outlet/>}/> */}
+        <Outlet/>
       </div>
     </>
   )

@@ -8,8 +8,8 @@ const LinkOfItem = ({ item }) => {
         <NavLink
           key={index}
           className={({ isActive }) =>
-            `block text-nowrap hover:translate-x-2 transition-all duration-200 p-2 pl-12 hover:bg-bg1 rounded-md ${
-              isActive ? "bg-slate-200" : ""
+            `block text-nowrap hover:translate-x-2 transition-all duration-200 p-2 pl-12 mb-1 hover:bg-bg1 hover:dark:bg-bg5/15 rounded-md ${
+              isActive ? "bg-slate-200 dark:bg-bg5/15 dark:text-white" : ""
             }`
           }
           to={`/${sbItem

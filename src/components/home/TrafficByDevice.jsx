@@ -48,7 +48,7 @@ export const TrafficByDevice = () => {
           display: false,
         },
         ticks: {
-          color: "#4A5568",
+          // color: "#4A5568",
         },
       },
       y: {
@@ -56,7 +56,7 @@ export const TrafficByDevice = () => {
           display: false,
         },
         ticks: {
-          color: "#4A5568",
+          // color: "#4A5568",
         },
         beginAtZero: true,
       },
@@ -64,7 +64,7 @@ export const TrafficByDevice = () => {
   };
 
   return (
-    <div className="overflow-x-auto w-full">
+    <div className="overflow-x-auto  w-full">
       <div className="min-w-[400px] h-64">
         <Bar data={data} options={options} />
       </div>
