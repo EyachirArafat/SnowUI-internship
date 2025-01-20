@@ -45,7 +45,20 @@ export const MyBar2 = () => {
           </div>
         </div>
 
-        <div className={`p-6 dark:text-white text-black bg-white dark:bg-black/50 fixed bottom-0 left-0 md2:w-[65%] md2:ml-[15%] ${!isLeftSidebar ? "md:w-[75%] w-full md:ml-[25%]" : "mx-auto"}`}>
+        <div className={`p-6 dark:text-white text-black w-full bg-white dark:bg-black/70 fixed bottom-0 left-0 ${
+            !isLeftSidebar
+              ? "md:w-[75%] md:left-[25%] md2:w-[80%] md2:left-[20%] "
+              : "md:w-full md:left-[0%] md:ml-[0%] md2:w-[65%] md2:left-[15%] w-full"
+          }`}>
+            <div className="md:flex hidden justify-between ">
+              <p>© 2025 SnowUI</p>
+              <div className="flex gap-3 items-center">
+                <p>About</p>
+                <p>Support</p>
+                <p>Contact Us</p>
+              </div>
+
+            </div>
 
           <div className="md:hidden flex justify-between items-center">
           <AiFillHome />
