@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -12,6 +13,7 @@ export default {
         bg2: "#EDEEFC",
         bg3: "#E6F1FD",
         bg4: "#F9F9FA",
+        bg5: "#FFFFFF"
       },
       fontSize:{
         t14: "14px"

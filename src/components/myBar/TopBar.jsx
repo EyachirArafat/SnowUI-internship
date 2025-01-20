@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaRegStar } from 'react-icons/fa'
 import { TbLayoutSidebarLeftCollapse, TbLayoutSidebarRightCollapse } from 'react-icons/tb'
 import Breadcrumbs from '@mui/material/Breadcrumbs';
@@ -11,8 +11,24 @@ import { cn } from '../../utils/lib/cn';
 
 
 export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1, BCPath2}) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleDarkModeToggle = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', !isDarkMode ? 'dark' : 'light');
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setIsDarkMode(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
   return (
-    <header className={cn('px-7 py-5 border-b fixed top-0  w-full bg-white  z-10',TBclass)}>
+    <header className={cn('px-7 py-5 border-b fixed top-0  w-full bg-white dark:bg-gray-800 dark:text-white z-10',TBclass)}>
       <div className='flex justify-between sm:items-center items-start'>
         <div className='flex md:flex-row flex-col justify-start md:items-center gap-2'>
           <button onClick={toggleLeftSidebar}>
@@ -44,7 +60,13 @@ export const TopBar = ({toggleLeftSidebar, toggleRightSidebar, TBclass, BCPath1,
           </div>
           
           <div className='flex items-center gap-2 justify-end'>
-          <IoSunnyOutline size={22} className='cursor-pointer'/>
+          <button onClick={handleDarkModeToggle}>
+              {isDarkMode ? (
+                <IoMoonOutline size={22} className="cursor-pointer" />
+              ) : (
+                <IoSunnyOutline size={22} className="cursor-pointer" />
+              )}
+            </button>
           <MdHistory size={22} className='cursor-pointer'/>
           <GoBell size={22} className='cursor-pointer'/>
           <button onClick={toggleRightSidebar}>

@@ -10,7 +10,6 @@ export const LineProgress = ({ className, arrNum }) => {
     "bg-gray-200",
     "bg-gray-100",
   ];
-
   const segmentWidth = `${100 / arrNum}%`;
 
   return (

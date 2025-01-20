@@ -18,7 +18,7 @@ export const LeftSideBar = ({className}) => {
 
   return (
 
-      <div className={cn("h-screen fixed top-0 left-0 md2:w-[15%] md:w-[20%] bg-white shadow-lg border-r px-4 md:flex hidden flex-col", className)}>
+      <div className={cn("h-screen fixed top-0 left-0 md2:w-[15%] md:w-[20%] dark:bg-bg5/15 bg-white shadow-lg border-r px-4 md:flex hidden flex-col", className)}>
         {/* Sidebar Header */}
         <div className="flex gap-2 pl-6 items-center py-7">
            <img src="/profile-pic.svg" alt="profile-pic.svg" />

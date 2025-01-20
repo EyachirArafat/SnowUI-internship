@@ -2,6 +2,7 @@ import { FormControl, InputLabel, NativeSelect } from '@mui/material'
 import React from 'react'
 import { OverviewHeader } from './OverviewHeader'
 import { LineChart } from './LineChart'
+import { TrafficDL } from './TrafficDL'
 
 export const BodyData = () => {
   return (
@@ -32,6 +33,8 @@ export const BodyData = () => {
       {/* line chart */}
       <LineChart/>
 
+      {/* Traffic By Device & Location */}
+       <TrafficDL/>
 
     </div>
   )
